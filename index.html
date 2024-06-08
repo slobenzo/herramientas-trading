@@ -34,6 +34,7 @@
         .title {
             font-size: 2.5em;
             margin-bottom: 60px;
+            font-weight: bold; /* Cambia el título a negrilla */
         }
 
         .buttons {
@@ -65,53 +66,11 @@
             transform: scale(1.05);
         }
 
-        .button-1 {
-            background-color: #007aff;
-            color: white;
-        }
-
-        .button-2 {
-            background-color: #007aff;
-            color: white;
-        }
-
+        .button-1,
+        .button-2,
         .button-3 {
             background-color: #007aff;
             color: white;
-        }
-
-        .dark-mode .button-1,
-        .dark-mode .button-2,
-        .dark-mode .button-3 {
-            background-color: #0a84ff;
-        }
-
-        .mode-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            cursor: pointer;
-            border: none;
-            border-radius: 5px;
-            background-color: black;
-            color: white;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .dark-mode {
-            background-color: #1c1c1e;
-            color: #f5f5f7;
-        }
-
-        .dark-mode .main-container {
-            background-color: #2c2c2e;
-            color: #f5f5f7;
-        }
-
-        .dark-mode .mode-toggle {
-            background-color: white;
-            color: black;
         }
 
         .tooltip {
@@ -154,16 +113,39 @@
                 padding: 10px 20px;
                 font-size: 1em;
             }
+        }
 
-            .mode-toggle {
-                padding: 5px 10px;
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1c1c1e;
+                color: #f5f5f7;
+            }
+
+            .main-container {
+                background-color: #2c2c2e;
+                color: #f5f5f7;
+            }
+
+            .button-1,
+            .button-2,
+            .button-3 {
+                background-color: #0a84ff;
+            }
+
+            .tooltip .tooltiptext {
+                background-color: rgba(255, 255, 255, 0.9);
+                color: #000;
+            }
+
+            .tooltip .tooltiptext::after {
+                border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
             }
         }
     </style>
 </head>
 <body>
     <div class="main-container">
-        <div class="title">Herramientas de Trading</div>
+        <div class="title">HERRAMIENTAS TRADING</div>
         <div class="buttons">
             <div class="tooltip">
                 <button class="button button-1" onclick="window.location.href='https://slobenzo.github.io/calculadoradeapalancamiento/'">
@@ -185,18 +167,5 @@
             </div>
         </div>
     </div>
-    <button class="mode-toggle" onclick="toggleMode()">Modo Oscuro</button>
-
-    <script>
-        function toggleMode() {
-            document.body.classList.toggle('dark-mode');
-            var modeToggle = document.querySelector('.mode-toggle');
-            if (document.body.classList.contains('dark-mode')) {
-                modeToggle.textContent = 'Modo Claro';
-            } else {
-                modeToggle.textContent = 'Modo Oscuro';
-            }
-        }
-    </script>
 </body>
 </html>
