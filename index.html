@@ -68,7 +68,8 @@
 
         .button-1,
         .button-2,
-        .button-3 {
+        .button-3,
+        .button-4 {
             background-color: #007aff;
             color: white;
         }
@@ -128,7 +129,8 @@
 
             .button-1,
             .button-2,
-            .button-3 {
+            .button-3,
+            .button-4 {
                 background-color: #0a84ff;
             }
 
@@ -147,21 +149,24 @@
     <div class="main-container">
         <div class="title">HERRAMIENTAS TRADING</div>
         <div class="buttons">
-            <div class="tooltip">
+            <div>
                 <button class="button button-1" onclick="window.location.href='https://slobenzo.github.io/calculadoradeapalancamiento/'">
                     <i class="fas fa-calculator"></i> Calculadora de Apalancamiento
                 </button>
-                <span class="tooltiptext">Ir a la calculadora de apalancamiento</span>
             </div>
-            <div class="tooltip">
+            <div>
                 <button class="button button-2" onclick="window.location.href='https://slobenzo.github.io/rangos-estadisticos/'">
                     <i class="fas fa-chart-line"></i> Rangos Estadísticos
                 </button>
-                <span class="tooltiptext">Ir a los rangos estadísticos</span>
+            </div>
+            <div>
+                <button class="button button-3" onclick="window.location.href='https://slobenzo.github.io/correlacion-de-activos/'">
+                    <i class="fas fa-chart-bar"></i> Correlación de Activos
+                </button>
             </div>
             <div class="tooltip">
-                <button class="button button-3" onclick="alert('Página en construcción')">
-                    <i class="fas fa-chart-bar"></i> Correlación de Activos
+                <button class="button button-4" onclick="alert('Página en construcción')">
+                    <i class="fas fa-history"></i> Backtesting
                 </button>
                 <span class="tooltiptext">Página en construcción</span>
             </div>
@@ -169,3 +174,4 @@
     </div>
 </body>
 </html>
+
